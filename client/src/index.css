@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+    body {
+      @apply min-h-screen pt-20 md:pt-20 lg:pt-24;
+    }
+    main {
+      @apply pb-12; 
+    }
+  }
+
+  body{
+    background-color: rgb(241,245,241);
+    font-family:  'Roboto', sans-serif;
+    font-size: 16px;
+  }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -10,6 +10,7 @@ import AgentProfiles from "./pages/AgentProfiles"
 import PropertyDetails from "./pages/PropertyDetails"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import About from "./pages/About"
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
         <Route path="/sign-in" element={<SignIn/>}/>
         <Route path="/sign-up" element={<SignUp/>}/>
         <Route path="/blog" element={<Blog/>}/>

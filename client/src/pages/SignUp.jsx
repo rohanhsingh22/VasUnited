@@ -27,6 +27,11 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   try {
     setLoading(true);
+    if (formData.password !== formData.confirmPassword) {
+      setLoading(false);
+      setError('Passwords do not match');
+      return; 
+    }
     const response = await fetch('/api/auth/signup', {
       method: 'POST',
       headers: {
