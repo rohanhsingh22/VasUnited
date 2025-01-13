@@ -11,6 +11,7 @@ import PropertyDetails from "./pages/PropertyDetails"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import About from "./pages/About"
+import PrivateRoute from "./components/PrivateRoutes"
 
 export default function App() {
   return (
@@ -23,10 +24,12 @@ export default function App() {
         <Route path="/sign-up" element={<SignUp/>}/>
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/contact" element={<Contact/>}/>
-        <Route path="/userprofile" element={<UserProfile/>}/>
-        <Route path="/agentprofile" element={<AgentProfiles/>}/>
         <Route path="/propertylisting" element={<PropertyListing/>}/>
         <Route path="/propertydetails" element={<PropertyDetails/>}/>
+        <Route element={<PrivateRoute/>}>
+          <Route path='/userprofile' element={<UserProfile/>}/>
+          <Route path='/agentprofile' element={<AgentProfiles/>}/>
+        </Route>
       </Routes>
       <Footer/>
     </BrowserRouter>

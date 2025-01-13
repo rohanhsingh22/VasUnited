@@ -2,8 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { RiUserAddLine } from 'react-icons/ri'
 import { MdPhone } from 'react-icons/md'
+import { useSelector } from 'react-redux'
 
 export default function Header() {
+  const { currentUser } = useSelector(state => state.user)
   return (
     <header className='bg-white shadow-md fixed top-0 left-0 w-full z-50'>
       <div className='mx-auto flex justify-between items-center p-4 h-20 md:h-22 lg:h-24'>
@@ -23,10 +25,10 @@ export default function Header() {
             </span>+1 (000) 555-6789
           </a>
 
-          <Link to='/sign-in' className='bg-blue-500 rounded-full p-2 w-fit'>
-            <li className='sm:inline'>
-              <RiUserAddLine size={14} color='#ffffff' style={{ fontWeight: 'bold' }} />
-            </li>
+          <Link to={currentUser? '/userprofile': '/sign-in'}>
+          {currentUser ? (<img className='rounded-full h-7 w-7 object-cover' src={currentUser.avatar}/>) : <li className='sm:inline'>
+              <RiUserAddLine color='#ffffff' className='bg-blue-500 text-2xl rounded-full font-bold h-7 w-7 px-2'/>
+            </li>}
           </Link>
           <button className="bg-blue-500 hover:bg-black text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105">
             Add Listing

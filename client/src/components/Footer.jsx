@@ -8,7 +8,7 @@ import { FaFacebook, FaWhatsapp, FaTelegram, FaTwitter, FaYoutube, FaInstagram }
 
 export default function Footer() {
   return (
-    <footer className=" bg-blue-950 text-white p-8 relative bottom-0 left-0 w-full text-center ">
+    <footer className=" bg-blue-950 text-white p-8 relative bottom-0 left-0 w-full text-center">
       <div className="flex flex-wrap justify-around gap-8 md:gap-12 mx-28">
      
         <div className="flex flex-col items-start">

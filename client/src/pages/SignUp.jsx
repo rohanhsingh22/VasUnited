@@ -1,4 +1,3 @@
-import { set } from 'mongoose';
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
@@ -62,7 +61,7 @@ const handleSubmit = async (e) => {
         <input id='username' type="text" placeholder="Username" className='bg-white-100 p-3 rounded-lg' onChange={handleChange}/>
         <input id='email' type="email" placeholder="Email" className='bg-white-100 p-3 rounded-lg' onChange={handleChange}/>
         <input id='password' type="password" placeholder="Password" className='bg-white-100 p-3 rounded-lg' onChange={handleChange}/>
-        <input id='paswword' type="password" placeholder="Confirm Password" className='bg-white-100 p-3 rounded-lg' onChange={handleChange}/>
+        <input id='confirmPassword' type="confirmPassword" placeholder="Confirm Password" className='bg-white-100 p-3 rounded-lg' onChange={handleChange}/>
         <input id='phone' type="text" placeholder="Phone Number" className='bg-white-100 p-3 rounded-lg' onChange={handleChange}/>
         <select name="userType" id="userType" className='bg-white-100 p-3 rounded-lg ' onChange={handleChange}>
           <option >Select User Type</option>
