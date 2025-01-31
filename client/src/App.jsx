@@ -12,6 +12,7 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import About from "./pages/About"
 import PrivateRoute from "./components/PrivateRoutes"
+import CreateListing from "./pages/CreateListing"
 
 export default function App() {
   return (
@@ -20,15 +21,16 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
-        <Route path="/sign-in" element={<SignIn/>}/>
-        <Route path="/sign-up" element={<SignUp/>}/>
+        {/* <Route path="/sign-in" element={<SignIn/>}/>
+        <Route path="/sign-up" element={<SignUp/>}/> */}
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/propertylisting" element={<PropertyListing/>}/>
         <Route path="/propertydetails" element={<PropertyDetails/>}/>
         <Route element={<PrivateRoute/>}>
-          <Route path='/userprofile' element={<UserProfile/>}/>
+        <Route path='/userprofile' element={<UserProfile/>}/>
           <Route path='/agentprofile' element={<AgentProfiles/>}/>
+          <Route path='/createlisting' element={<CreateListing/>}/>
         </Route>
       </Routes>
       <Footer/>
